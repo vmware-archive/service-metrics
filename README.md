@@ -6,7 +6,7 @@ In production, this application is deployed via a [BOSH release](https://github.
 
 ## User Documentation
 
-User documentation can be found [here](https://docs.pivotal.io/svc-sdk/odb). Documentation is targeted at service authors wishing to deploy their services on-demand and operators wanting to offer services on-demand.
+User documentation can be found [here](https://docs.pivotal.io/svc-sdk/service-metrics). Documentation is targeted at service authors wishing to deploy their services on-demand and operators wanting to offer services on-demand.
 
 ## Useage 
 
