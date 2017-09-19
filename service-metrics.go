@@ -147,6 +147,14 @@ func process(logger lager.Logger) {
 	}
 
 	for _, m := range parsedMetrics {
-		dmetrics.SendValue(m.Key, m.Value, m.Unit)
+		err := dmetrics.SendValue(m.Key, m.Value, m.Unit)
+		if err != nil {
+			logger.Error("sending metric value failed", err, lager.Data{
+				"event":        "failed",
+				"metric.key":   m.Key,
+				"metric.value": m.Value,
+				"metric.unit":  m.Unit,
+			})
+		}
 	}
 }
